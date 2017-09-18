@@ -34,7 +34,24 @@ int even_fib(){
   printf("Sum of even fibs less than 4 million is %d\n", sum);
   return sum;
 }
-    
+
+int specialpyp(){
+  int a;
+  int b;
+  int c;
+  int ans;
+  for(a = 1; a < 999; a++){
+    for(int b = 1; b < 999; b++){
+      c = 1000 - a - b;
+      if(c * c - (a * a) - (b * b) == 0){
+	ans = a * b * c;
+      }
+    }
+  }
+  printf("The product of the 3 side lengths of our Special Pythagorean Triangle is %d\n", ans);
+  return ans;
+}
+  
 
 int mult_3_5(){
   int sum = 0;
@@ -52,5 +69,6 @@ int main(){
   mult_3_5();
   even_fib();
   sum_square_diff();
+  specialpyp();
   return 0;
 }
